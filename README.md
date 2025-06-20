@@ -1,19 +1,69 @@
-# 🏫 School Management CRUD Module (CodeIgniter 4 - HMVC)
+# 🏫 School Management System
 
-A basic CRUD app for managing school partners built using **CodeIgniter 4** with **HMVC structure**.
-
----
+A modular CodeIgniter 4 project for managing schools, students, and session notes — using HMVC structure with Bootstrap UI.
 
 ## 📦 Features Implemented
 
-- List all schools with pagination and search
-- Add a new school with form validation
-- Edit school details
-- Delete a school with confirmation
-- Input validation for email and number of students
-- Clean MVC & HMVC architecture
+### ✅ Assignment 1: Schools CRUD (HMVC)
+- Add/edit/delete schools
+- Search and pagination
+- Bootstrap-styled UI
+- Flash messages and validation
+- Soft delete support
+
+### ✅ Assignment 5: Session Notes Management
+- Add session notes per student
+- Timestamped records
+- View and search notes
+- Bootstrap UI
+
+### ✅ Students Module (Custom Addition)
+- Add/list students
+- Link to their session notes
+- Uses HMVC pattern
+
+### ✅ Dashboard Homepage
+- Centralized navigation to Schools and Students
 
 ---
+
+## 📁 Folder Structure (HMVC-Style)
+
+app/
+├── Modules/
+│ ├── Schools/
+│ ├── Students/
+│ └── Notes/
+└── Views/
+└── home.php
+
+
+---
+
+## 🛠️ Setup Instructions
+
+1. Clone repo / download zip
+2. Run `composer install`
+3. Configure `.env` (DB credentials, environment)
+4. Create and migrate tables:
+   - `schools`, `students`, `session_notes`
+5. Run development server:
+   ```bash
+   php spark serve --port=8080
+6 . Visit: http://localhost:8080
+
+
+📦 Database Tables
+schools
+id, school_name, contact_person, email, num_students, status, created_at, updated_at, deleted_at
+
+students
+id, name, email, phone, created_at, updated_at
+
+session_notes
+id, student_id, note_text, created_at, updated_at
+
+
 
 ## 🚀 Setup Instructions
 
@@ -60,17 +110,3 @@ No login system implemented (public module).
 Future enhancement could include admin login and role-based access.
 
 ---
-
-## 📁 HMVC Module Structure
-
-```
-/application
-  /modules
-    /school
-      /controllers/School.php
-      /models/School_model.php
-      /views/
-        form.php
-        list.php
-```
-

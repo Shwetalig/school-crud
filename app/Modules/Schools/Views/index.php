@@ -50,6 +50,7 @@
                             </span>
                         </td>
                         <td>
+                            
                             <a href="<?= site_url('schools/edit/'.$school['id']) ?>" class="btn btn-sm btn-warning">Edit</a>
                             <a href="<?= site_url('schools/delete/'.$school['id']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Delete this school?')">Delete</a>
                         </td>
